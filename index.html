@@ -13,10 +13,16 @@
         height: 700,
         parentNode: undefined,
         configOverwrite: {},
-        jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZXh0Ijp7InVzZXIiOnsiYXZhdGFyIjoiaHR0cDovL2ljb25zLmljb25hcmNoaXZlLmNvbS9pY29ucy9pY29ucy1sYW5kL21lZGljYWwvMjU2L1Blb3BsZS1QYXRpZW50LU1hbGUtaWNvbi5wbmciLCJuYW1lIjoiSmFuZWsgS293YWxza2kiLCJlbWFpbCI6ImphbmVrQGV4YW1wbGUuY29tIn19LCJhdWQiOiJteV9qaXRzaV9hcHBfaWQiLCJpc3MiOiJjZ21fY2xpZW50X29mZmljaWFsIiwic3ViIjoibWVldC5qaXRzaSIsInJvb20iOiJUeWxrb1RlblJvb20ifQ.44S7pUQ44RL86A4OFUgRhTWfey9DKhVrmX8SWx35JQ4',
+        jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZXh0Ijp7InVzZXIiOnsiYXZhdGFyIjoiaHR0cDovL2ljb25zLmljb25hcmNoaXZlLmNvbS9pY29ucy9pY29ucy1sYW5kL21lZGljYWwvMjU2L1Blb3BsZS1QYXRpZW50LU1hbGUtaWNvbi5wbmciLCJuYW1lIjoiSmFuZWsgS293YWxza2kiLCJlbWFpbCI6ImphbmVrQGV4YW1wbGUuY29tIn19LCJhdWQiOiJteV9qaXRzaV9hcHBfaWQiLCJpc3MiOiJjZ21fY2xpZW50X29mZmljaWFsIiwic3ViIjoibWVldC5qaXRzaSIsInJvb20iOiJUeWxrb1RlblJvb20ifQ.44S7pUQ44RL86A4OFUgRhTWfey9DKhVrmX8SWx35JQ4',       
         interfaceConfigOverwrite: {
-            filmStripOnly: true,
-            SHOW_JITSI_WATERMARK: false
+            //filmStripOnly: true,
+            SHOW_JITSI_WATERMARK: false,
+            SHOW_WATERMARK_FOR_GUESTS: false,
+
+            TOOLBAR_BUTTONS: [
+        'microphone', 'camera', 'hangup', 'chat','settings', 'filmstrip', 'tileview' ],
+            SETTINGS_SECTIONS: [ 'devices' ],
+
         }
     }
     var api = new JitsiMeetExternalAPI(domain, options);
