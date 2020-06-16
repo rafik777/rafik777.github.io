@@ -1,0 +1,31 @@
+<html itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+</head>
+<body>
+<script src="https://meet.jit.si/external_api.js"></script>
+<script>
+    var domain = "10.181.1.51:8443";
+    var options = {
+        roomName: "TylkoTenRoom",
+        width: 1000,
+        height: 700,
+        parentNode: undefined,
+        configOverwrite: {},
+        jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb250ZXh0Ijp7InVzZXIiOnsiYXZhdGFyIjoiaHR0cDovL2ljb25zLmljb25hcmNoaXZlLmNvbS9pY29ucy9pY29ucy1sYW5kL21lZGljYWwvMjU2L1Blb3BsZS1QYXRpZW50LU1hbGUtaWNvbi5wbmciLCJuYW1lIjoiSmFuZWsgS293YWxza2kiLCJlbWFpbCI6ImphbmVrQGV4YW1wbGUuY29tIn19LCJhdWQiOiJteV9qaXRzaV9hcHBfaWQiLCJpc3MiOiJjZ21fY2xpZW50X29mZmljaWFsIiwic3ViIjoibWVldC5qaXRzaSIsInJvb20iOiJUeWxrb1RlblJvb20ifQ.44S7pUQ44RL86A4OFUgRhTWfey9DKhVrmX8SWx35JQ4',
+        interfaceConfigOverwrite: {
+            filmStripOnly: true,
+            SHOW_JITSI_WATERMARK: false
+        }
+    }
+    var api = new JitsiMeetExternalAPI(domain, options);
+
+    api.on('videoConferenceJoined', (ev) => {
+        console.log('Local User Joined');
+        api.executeCommand('displayName', 'MyName');
+    });
+
+</script>
+</body>
+</html>
