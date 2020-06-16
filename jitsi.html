@@ -14,8 +14,14 @@
         parentNode: undefined,
         configOverwrite: {},
         interfaceConfigOverwrite: {
-            filmStripOnly: true,
-            SHOW_JITSI_WATERMARK: false
+            //filmStripOnly: true,
+            SHOW_JITSI_WATERMARK: false,
+                SHOW_WATERMARK_FOR_GUESTS: false,
+
+            TOOLBAR_BUTTONS: [
+        'microphone', 'camera', 'hangup', 'chat','settings', 'filmstrip', 'tileview' ],
+            SETTINGS_SECTIONS: [ 'devices' ],
+
         }
     }
     var api = new JitsiMeetExternalAPI(domain, options);
